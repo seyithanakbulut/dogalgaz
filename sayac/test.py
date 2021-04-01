@@ -130,7 +130,7 @@ def sayacdondur(path):
     cv2.imwrite('../kayit.png', edged)
 
     # okuma işlemi
-    img_to_str = pytesseract.pytesseract.tesseract_cmd=r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+    img_to_str = pytesseract.pytesseract.tesseract_cmd=r"sayac/Tesseract-OCR/tesseract.exe"
     imgg=Image.open("../kayit.png")
     result=pytesseract.image_to_string(imgg)
 

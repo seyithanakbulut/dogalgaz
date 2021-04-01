@@ -1,8 +1,8 @@
-from flask import Flask, jsonify, request, flash, redirect, url_for
+from flask import Flask, jsonify, request, flash, redirect
 from sayac import test
 from werkzeug.utils import secure_filename
 import os
-import uuid
+
 
 UPLOAD_FOLDER = 'static/images'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
@@ -13,8 +13,8 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route("/")
 def baslangic_api():
-    result = test.sayacdondur("images/16.jpg")
-    return jsonify({"Sonuc": result})
+    #result = test.sayacdondur("images/16.jpg")
+    return jsonify({"Sonuc": "Başarılı"})
 
 
 @app.route('/sayac', methods=['POST'])
